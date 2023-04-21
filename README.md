@@ -1,4 +1,9 @@
 ## 📖 Installation
+####Once you've cloned the repo and updated the environment, sign your name below:
+
+Jay
+
+####The ONLY CHANGE after installing the virtual environment should be to the README.md file once you update it
 
 DjangoX can be installed via Pip, Pipenv, or Docker. To start, clone the repo to your local computer and change into the proper directory.
 
