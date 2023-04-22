@@ -6,6 +6,7 @@ html {
 
 body {
   margin-bottom: 60px;
+  background-color: #fdfdfd;
 }
 
 .container {
@@ -69,6 +70,7 @@ textarea:focus {
 }
 
 #drop-zone {
+  background-color: #ffffff;
   border: 2px dashed #ccc;
   padding: 20px;
   margin-bottom: 16px;
