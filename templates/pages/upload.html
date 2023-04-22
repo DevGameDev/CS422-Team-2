@@ -1,0 +1,62 @@
+{% extends '_base.html' %}
+
+{% block title %}Upload{% endblock %}
+
+{% block content %}
+
+<h3 id="uploadheader">Upload a Dataset:</h3>
+
+<form id="upload-form">
+    <label for="dataset-name">Dataset Name:</label>
+    <input type="text" id="dataset-name" name="dataset-name">
+  
+    <label for="description">Description:</label>
+    <textarea id="description" name="description" rows="3"></textarea>
+  
+    <label for="date">Date:</label>
+    <input type="date" id="date" name="date">
+  
+    <div id="drop-zone">
+      <p>Drag & Drop or Browse</p>
+      <input type="file" id="file-input" name="files[]" multiple>
+    </div>
+  
+    <button type="submit" id="submit-button">Submit</button>
+  </form>
+  
+  <script>
+    // Get the drop zone and file input elements
+    const dropZone = document.getElementById('drop-zone');
+    const fileInput = document.getElementById('file-input');
+  
+    // Prevent the default dragover and drop behaviors
+    window.addEventListener("dragover", function(e) {
+      e.preventDefault();
+    });
+  
+    window.addEventListener("drop", function(e) {
+      e.preventDefault();
+      const files = e.dataTransfer.files;
+      fileInput.files = files;
+      displayFileNames(files);
+    });
+  
+    // Trigger the file input when the drop zone is clicked
+    dropZone.addEventListener('click', () => {
+      fileInput.click();
+    });
+  
+    // Update the drop zone text when a file is selected
+    fileInput.addEventListener("change", function(e) {
+      const files = e.target.files;
+      displayFileNames(files);
+    });
+  
+    // Helper function to display the selected file names
+    function displayFileNames(files) {
+      const fileNames = Array.from(files).map(file => file.name).join(", ");
+      dropZone.textContent = files.length + " file(s) selected: " + fileNames;
+    }
+  </script>
+  
+{% endblock content %}

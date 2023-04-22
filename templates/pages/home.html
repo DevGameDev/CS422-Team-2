@@ -1,11 +1,17 @@
 {% extends '_base.html' %}
 {% load static %}
 
-{% block title %}Home page{% endblock title %}
+{% block title %}Home{% endblock title %}
 
 {% block content %}
-<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-  <img src="{% static 'images/logo.png' %}" class="img-fluid" alt="DjangoX logo"/>
-  <p class="lead">A Django starter project with batteries.</p>
-</div>
 {% endblock content %}
+
+<style>
+  body {
+    background-image: url("https://github.com/DevGameDev/forecasTS/blob/a68bc3f499d1e49d3e50201bce4467d9e6354924/static/images/logo.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+</style>
+
