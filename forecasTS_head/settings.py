@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     "crispy_bootstrap5",
     "debug_toolbar",
     # Local
+    "common",
     "accounts",
     "data_sort",
     "stats",
