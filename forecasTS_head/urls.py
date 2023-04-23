@@ -5,10 +5,8 @@ from django.urls import path, include
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("accounts/", include("allauth.urls")),
-    path("", include("pages.urls")),
-    path("", include("pages.urls")),
-    path("", include("pages.urls")),
-    path("", include("pages.urls")),
+    path("upload/", include("upload.urls")),
+    path("", include("data_sort.urls")),
 ]
 
 if settings.DEBUG:

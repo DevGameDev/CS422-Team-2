@@ -23,6 +23,7 @@ class FlexibleDateField(models.DateTimeField):
                     pass
         return super().get_prep_value(value)
 
+
 class TimeSeriesSetMetadata(models.Model):
     name = models.CharField(max_length=255)
     description = models.TextField()
@@ -35,6 +36,7 @@ class TimeSeriesSetMetadata(models.Model):
     related_paper_reference = models.CharField(max_length=255)
     related_paper_link = models.URLField()
 
+
 class TimeSeriesMetadata(models.Model):
     name = models.CharField(max_length=255)
     description = models.TextField()
@@ -45,11 +47,13 @@ class TimeSeriesMetadata(models.Model):
     length = models.IntegerField()
     set = models.ForeignKey(TimeSeriesSetMetadata, on_delete=models.CASCADE)
 
+
 class TimeSeriesData(models.Model):
     datetime = FlexibleDateField()
     magnitude = models.FloatField()
     vectorIndex = models.IntegerField()
     metadata = models.ForeignKey(TimeSeriesMetadata, on_delete=models.CASCADE, db_index=True)
+
 
 class ForecastingTask(models.Model):
     metadata = models.ForeignKey(TimeSeriesMetadata, on_delete=models.CASCADE)
