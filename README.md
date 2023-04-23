@@ -2,8 +2,8 @@
 ####Once you've cloned the repo and updated the environment, sign your name below:
 
 Jay
-
 Nick
+Devin
 
 ####The ONLY CHANGE after installing the virtual environment should be to the README.md file once you update it
 
