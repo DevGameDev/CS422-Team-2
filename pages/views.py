@@ -8,8 +8,10 @@ class HomePageView(TemplateView):
 class ViewPageView(TemplateView):
     template_name = "pages/view.html"
 
+
 class UploadPageView(TemplateView):
     template_name = "pages/upload.html"
+
 
 class DashboardPageView(TemplateView):
     template_name = "pages/dashboard.html"

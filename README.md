@@ -50,7 +50,7 @@ $ pipenv shell
 To use Docker with PostgreSQL as the database update the `DATABASES` section of `django_project/settings.py` to reflect the following:
 
 ```python
-# django_project/settings.py
+# forecasTS_head/settings.py
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
